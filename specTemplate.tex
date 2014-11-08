@@ -1,0 +1,49 @@
+\documentclass[main.tex]{subfiles}
+
+%Insert the name of the consultant here
+\def\consultant{Consultant}
+
+
+\begin{document}
+
+%This creates the section headings based on the name and number above, the label is for reference of the section
+\createSpecSection{00 00 00}{Section Name}
+
+%This makes the header show up on the first page of the section
+\thispagestyle{fancy}
+
+%Create Part 1 - General
+\partStart{General}
+    \subStart{}
+    \subEnd{}
+\partEnd{}
+    
+%Create Part 2 - Products
+\partStart{Products}
+    \subStart{}
+    \subEnd{}
+\partEnd{}
+
+%Create Part 3 - Execution
+\partStart{Execution}
+    \subStart{SubSection 1}
+    	& Item 1.
+    	& Item 2. \sentanceLabel{untitledLabel}
+    		&& Sub Item 1.
+    		&& Sub Item 2.
+    \subEnd{}
+    \subStart{SubSection 2 - How to Reference}
+    	& Remember you have to compile your document twice for the references to work.
+    	& This is a reference to a Section
+    		&& \sectionRef{00 00 00}
+    	& This is a reference to a Part in a Section (specifically, this section, General part)
+    		&& \partRef{00 00 00}{General}
+    	& This is a reference to a Paragraph
+    		&& \paragraphRef{00 00 00}{Execution}{SubSection 1}
+    	& This is a reference to a Sentance, note you have to add the label to sentances and you should not label sub Items (IE those with \&\&, \&\&\& etc.)
+    		&& \sentanceRef{00 00 00}{Execution}{SubSection 1}{untitledLabel}
+    	
+\partEnd{}
+
+\newpage{}
+\end{document}
