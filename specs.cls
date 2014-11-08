@@ -3,24 +3,12 @@
 
 \LoadClass[twoside,openright]{report}
 
+%This specifies the variables, I prefer this over options to the class because order would be hard to remember
 \newcommand\consultant{Consultant Name}
 \newcommand\projectName{Project Name}
 \newcommand\projectNumber{Project Number}
 \newcommand\issuedFor{Issue}
 \newcommand\ownerName{The Owner}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%																%
-%	DO NOT EDIT PAST THIS POINT!!!!								%
-%																%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %IF YOU EDIT BELOW
 
@@ -51,17 +39,27 @@
 
 
 \RequirePackage[a4paper]{geometry}
+
 \RequirePackage{fancyhdr}
+%this package makes the references into hyperlinks
 \RequirePackage{hyperref}
+
 \RequirePackage{bookmark}
-\RequirePackage{lipsum}
+%used this package for testing only
+%\RequirePackage{lipsum}
+%this package is used for the numbered lists
 \RequirePackage[ampersand]{easylist}
+%This package is used so that each spec section can be a file independent of main.tex yet still compile
 \RequirePackage{subfiles}
+
 \RequirePackage{titlesec}
+%this package makes the empty pages (so section does not start on back of page) truly blank, no headers and footers
 \RequirePackage{emptypage}
 \RequirePackage{lastpage}
+%Used for time in the footer
 \RequirePackage{datetime}
 \RequirePackage{etoolbox}
+%used to color text
 \RequirePackage{color}
 
 
@@ -80,7 +78,6 @@
 
 %This makes the chapter number not appear in the section
 \renewcommand*{\thesection}{\arabic{section}}
-%\renewcommand*{\thesubsection}{\arabic{subsection}}
 
 %This formats the title on the first page of a section
 \titlespacing*{\chapter}{0in}{-0.25in}{0.25in}
@@ -100,13 +97,13 @@
 
 %PDF META
 \hypersetup{
-  pdfcreator={AdamTEX},
+  pdfcreator={github.com/astallaert},
   pdfinfo={
     author={\consultant},
   }
 }
 
-% This adds the headers
+% This adds the headers and footers
 \lhead{\consultant\\\textbf{Project No. \projectNumber}\\\projectName}
 \chead{}
 \rhead{Section \theSectionNumber{}\\\textbf{\theSectionName{}}\\Issued for: \issuedFor}
@@ -119,5 +116,5 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-
+%used to only show the sections in the table of contents
 \setcounter{tocdepth}{0}
