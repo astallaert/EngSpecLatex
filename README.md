@@ -16,7 +16,11 @@ How to use these files
 ======================
 
 specTemplate.tex represents a specification section.
+
 Each specification section would be named based on the number ex '00 00 00.tex'
+
 You can edit and compile each section individually, but the 'main.tex' file must be in the same directory.
+
 You edit info common to every section (project name, issued for, etc.) in the 'main.tex' file.
+
 If you want to compile all the specs, compile the 'main.tex' file (make sure all sections are listed as described within the main.tex file)
