@@ -14,29 +14,29 @@
 
 %Create Part 1 - General
 \partStart{General}
-    \subStart{}
-    \subEnd{}
+    \paragraphStart{}
+    \paragraphEnd{}
 \partEnd{}
     
 %Create Part 2 - Products
 \partStart{Products}
-    \subStart{}
-    \subEnd{}
+    \paragraphStart{}
+    \paragraphEnd{}
 \partEnd{}
 
 %Create Part 3 - Execution
 \partStart{Execution}
 
 
-    \subStart{SubSection 1}
+    \paragraphStart{SubSection 1}
     	& Item 1.
     	& Item 2. \sentanceLabel{untitledLabel}
     		&& Sub Item 1.
     		&& Sub Item 2.
-    \subEnd{}
+    \paragraphEnd{}
  
 
-    \subStart{SubSection 2 - How to Reference}
+    \paragraphStart{SubSection 2 - How to Reference}
     	& Remember you have to compile your document twice for the references to work.
     	& This is a reference to a Section
     		&& \sectionRef{00 00 00}
@@ -46,10 +46,14 @@
     		&& \paragraphRef{00 00 00}{Execution}{SubSection 1}
     	& This is a reference to a Sentance, note you have to add the label to sentances and you should not label sub Items (IE those with \&\&, \&\&\& etc.)
     		&& \sentanceRef{00 00 00}{Execution}{SubSection 1}{untitledLabel}
-    \subEnd{}
+    \paragraphEnd{}
     
     
 \partEnd{}
+
+\begin{center}
+{\Large\textbf{END OF SECTION}}
+\end{center}
 
 \newpage{}
 \end{document}
